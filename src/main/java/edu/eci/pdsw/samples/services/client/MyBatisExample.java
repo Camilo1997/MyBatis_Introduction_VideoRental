@@ -18,6 +18,7 @@ package edu.eci.pdsw.samples.services.client;
 
 
 
+import edu.eci.pdsw.sampleprj.dao.mybatis.mappers.ClienteMapper;
 import java.io.IOException;
 import java.io.InputStream;
 import java.sql.SQLException;
@@ -64,9 +65,9 @@ public class MyBatisExample {
 
         
         //Crear el mapper y usarlo: 
-        //ClienteMapper cm=sqlss.getMapper(ClienteMapper.class)
-        //cm...
-        
+        ClienteMapper cm=sqlss.getMapper(ClienteMapper.class);
+        System.out.println(cm.consultarClientes());
+        int idCliente = 2105700;
         
         
         sqlss.commit();
